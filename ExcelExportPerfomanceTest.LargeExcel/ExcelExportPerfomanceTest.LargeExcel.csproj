@@ -1,7 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Anotations.csproj" />
+    <PackageReference Include="LargeXlsx" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Annotations.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

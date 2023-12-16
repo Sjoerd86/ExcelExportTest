@@ -3,21 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelExportPerfomanceTest", "ExcelExportPerfomanceTest\ExcelExportPerfomanceTest.csproj", "{FF408783-167E-488C-97AD-2F8ED6FDC2E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelExportPerfomanceTest", "ExcelExportPerfomanceTest\ExcelExportPerfomanceTest.csproj", "{FF408783-167E-488C-97AD-2F8ED6FDC2E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelExportPerfomanceTest.Anotations", "ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Anotations.csproj", "{0DC7D439-BCD0-4913-AAEB-85A80A989F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelExportPerfomanceTest.Annotations", "ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Annotations.csproj", "{0DC7D439-BCD0-4913-AAEB-85A80A989F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelExportPerfomanceTest.LargeExcel", "ExcelExportPerfomanceTest.LargeExcel\ExcelExportPerfomanceTest.LargeExcel.csproj", "{1B52668F-F0D7-4287-87F0-59057588704D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelExportPerfomanceTest.LargeExcel", "ExcelExportPerfomanceTest.LargeExcel\ExcelExportPerfomanceTest.LargeExcel.csproj", "{1B52668F-F0D7-4287-87F0-59057588704D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelExportPerfomanceTest.Core", "ExcelExportPerfomanceTest.Core\ExcelExportPerfomanceTest.Core.csproj", "{E763AF08-D594-43C6-AE43-097B216F4A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelExportPerfomanceTest.Core", "ExcelExportPerfomanceTest.Core\ExcelExportPerfomanceTest.Core.csproj", "{E763AF08-D594-43C6-AE43-097B216F4A2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FF408783-167E-488C-97AD-2F8ED6FDC2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +33,8 @@ Global
 		{E763AF08-D594-43C6-AE43-097B216F4A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E763AF08-D594-43C6-AE43-097B216F4A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E763AF08-D594-43C6-AE43-097B216F4A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

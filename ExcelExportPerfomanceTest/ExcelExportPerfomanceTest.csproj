@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Annotations.csproj" />
+    <ProjectReference Include="..\ExcelExportPerfomanceTest.Core\ExcelExportPerfomanceTest.Core.csproj" />
+    <ProjectReference Include="..\ExcelExportPerfomanceTest.LargeExcel\ExcelExportPerfomanceTest.LargeExcel.csproj" />
+  </ItemGroup>
+
 </Project>

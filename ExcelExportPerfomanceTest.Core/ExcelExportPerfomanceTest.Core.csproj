@@ -1,7 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Anotations.csproj" />
+    <PackageReference Include="BenchmarkDotNet.Annotations" Version="0.13.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelExportPerfomanceTest.Anotations\ExcelExportPerfomanceTest.Annotations.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

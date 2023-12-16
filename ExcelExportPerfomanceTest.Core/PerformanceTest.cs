@@ -1,34 +1,43 @@
-using System.Reflection.Metadata.Ecma335;
-using ExcelExportPerformanceTest.Anotations.Models;
-using Microsoft.VisualBasic;
+using BenchmarkDotNet.Attributes;
+using ExcelExportPerfomanceTest.Core.Models;
 
-public class PerformanceTest(IExcelWriter excelWriter)
+namespace ExcelExportPerfomanceTest.Core
 {
-    public IExcelWriter ExcelWriter { get; } = excelWriter;
-
-    public async Task RunTest()
+    public class PerformanceTest(IExcelWriter excelWriter)
     {
-        var gebruikers = new[]  { GetGebruiker() };
-        var columns = new Dictionary<string, Func<Gebruiker, object>>
-        {
-            {"Naam", i => i.Naam},
-            {"Achternaam", i => i.Achternaam},
-            {"Status", i => i.status},
-            {"Aantal rechten", i => i.Rechten.Length},
-        };
+        private readonly IExcelWriter excelWriter = excelWriter;
 
-        foreach(var recht in gebruikers[0].Rechten)
+        [GlobalSetup]
+        public void Setup()
         {
-            columns.Add(recht.Naam, i => true);
+            System.Diagnostics.Debugger.Launch();
         }
 
-        await excelWriter.WriteExcel(columns, gebruikers);        
+        [Benchmark]
+        public async Task RunTest()
+        {
+            Console.WriteLine("RunTest");
+          
+            var gebruikers = new[] { GetGebruiker() };
+            var columns = new Dictionary<string, Func<Gebruiker, object>>
+            {
+                {"Naam", i => i.Naam},
+                {"Achternaam", i => i.Achternaam},
+                {"Status", i => i.status},
+                {"Aantal rechten", i => i.Rechten.Length},
+            };
+
+            foreach (var recht in gebruikers[0].Rechten)
+            {
+               
+                columns.Add(recht.Naam, i => true);
+            }
+
+            await excelWriter.WriteExcel("Sheet1", columns, gebruikers);
+        }
+
+
+        //  Hier moet ik nog iets mooiers voor bouwen maar ik heb nu even geen tijd.
+        public static Gebruiker GetGebruiker() => new("Test1", "Manspersoon", Status.Nieuw, [new("Eerste recht"), new("Bla")]);
     }
-
-
-    //  Hier moet ik nog iets mooiers voor bouwen maar ik heb nu even geen tijd.
-    public static Gebruiker GetGebruiker() => new("Test1", "Manspersoon", Status.Nieuw, [new("Eerste recht"), new("Bla")]);
-
-    
-
 }
